@@ -76,38 +76,41 @@ const EditPostForm = () => {
 
     return (
         <section>
-            <h2>Edit Post</h2>
-            <form>
-                <label htmlFor="postTitle">Post Title:</label>
+            <h2 className="font-bold underline text-2xl flex justify-start mt-20 mb-10">Edit Post</h2>
+            <form className="flex flex-col w-10/12 rounded-2xl border-4 pt-6 pb-2 pr-4 pl-3 shadow-lg justify-center">
+                <label htmlFor="postTitle" className="pb-2">Post Title:</label>
                 <input
                     type="text"
                     id="postTitle"
                     name="postTitle"
                     value={title}
                     onChange={onTitleChanged}
+                    className="pt-1 pb-1 pl-2 mb-5 border-4"
                 />
-                <label htmlFor="postAuthor">Author:</label>
-                <select id="postAuthor" value={userId} onChange={onAuthorChanged}>
-                    <option value=""></option>
+                <label htmlFor="postAuthor" className="pb-2">Author:</label>
+                <select id="postAuthor" className="border-4 pb-2" value={userId} onChange={onAuthorChanged}>
+                    <option value="" className="pb-2"></option>
                     {usersOptions}
                 </select>
-                <label htmlFor="postContent">Content:</label>
+                <label htmlFor="postContent" className="pb-2">Content:</label>
                 <textarea
                     id="postContent"
                     name="postContent"
                     value={content}
                     onChange={onContentChanged}
+                    className="border-4 resize-none pl-4 pb-6"
                 />
                 <button
                     type="button"
                     onClick={onSavePostClicked}
                     disabled={!canSave}
+                    className="p-3 px-6 pt-2 mt-5 text-black bg-black rounded-full baseline bg-green-600 bg-opacity-50 hover:text-white hover:bg-green-900 hover:bg-opacity-100 "
                 >
                     Save Post
                 </button>
-                <button className="deleteButton"
+                <button className="deleteButton p-3 px-6 pt-2 mt-5 text-black bg-black rounded-full baseline bg-red-700 hover:text-white hover:bg-red-900 hover:bg-opacity-100 "
                     type="button"
-                    onClick={onDeletePostClicked}
+                    onClick={onDeletePostClicked}   
                 >
                     Delete Post
                 </button>

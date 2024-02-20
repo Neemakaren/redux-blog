@@ -22,11 +22,11 @@ const SinglePostPage = () => {
     }
 
     return (
-        <article>
-            <h2>{post.title}</h2>
-            <p>{post.body}</p>
+        <article className="rounded-2xl border-4 pt-2 pb-2 pr-4 pl-3 shadow-lg mt-20 p-10">
+            <h2 className="font-bold underline text-2xl flex justify-center mb-5">{post.title}</h2>
+            <p className='text-2xl'>{post.body}</p>
             <p className="postCredit">
-                <Link to={`/post/edit/${post.id}`}>Edit Post</Link>
+                <Link to={`/post/edit/${post.id}`} className='pr-4 font-bold text-1xl'>Edit Post</Link>
                 <PostAuthor userId={post.userId} />
                 <TimeAgo timestamp={post.date} />
             </p>

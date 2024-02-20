@@ -1,130 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-color: white;
-  color: #000;
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background-color: #ffffff;
 }
+
 
 body {
-  min-height: 100vh;
-  font-size: 1.5rem;
+  margin: 0;
+
 }
 
-input,
-textarea,
-button,
-select {
-  font: inherit;
-  margin-bottom: 1em;
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-header {
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-color: purple;
-  color: whitesmoke;
-  position: sticky;
-  top: 0;
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
 }
 
-nav {
-  display: flex;
-  justify-content: flex-end;
+.here {
+  background-image: url(./assets/Images/img.jpeg);
 }
 
-nav ul {
-  list-style-type: none;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-right: 1rem;
-}
-
-nav a, nav a:visited {
-  color: #fff;
-  text-decoration: none;
-}
-
-nav a:hover, nav a:focus {
-  text-decoration: underline;
-}
-
-main {
-  max-width: 500px;
-  margin: auto;
-}
-
-section {
-  margin-top: 1em;
-}
-
-article {
-  margin: 0.5em;
-  border: 1px solid #000;
+.cont {
+  border: 2px solid grey;
+  padding: 20px 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
-  padding: 1em;
 }
 
-h1 {
-  font-size: 3.5rem;
+.cont:hover {
+  transition: all .3s ease-in-out;
 }
 
-h2 {
-  margin-bottom: 1rem;
+
+.c {
+  border: 2px solid black;
+  margin: 40px;
+  padding: 30px;
 }
 
-p {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
-  font-size: 1.2rem;
-  margin: 0.5em 0;
-}
-
-form {
+.head {
   display: flex;
-  flex-direction: column;
-}
-
-textarea {
-  height: 200px;
-}
-
-.postCredit {
-  font-size: 1rem;
-}
-
-.postCredit a, 
-.postCredit a:visited {
-  margin-right: 0.5rem;
-  color: black;
-}
-
-.postCredit a:hover, 
-.postCredit a:focus {
-  color: hsla(0, 0%, 0%, 0.75);
-}
-
-.excerpt {
-  font-style: italic;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
 }
 
 .reactionButton {
-  margin: 0 0.25em 0 0;
-  background: transparent;
-  border: none;
-  color: #000;
-  font-size: 1rem;
+  padding: 7px;
 }
 
-.deleteButton {
-  background-color: palevioletred;
-  color: white;
-}
